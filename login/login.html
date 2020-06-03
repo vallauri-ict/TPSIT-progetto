@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" type="text/css" href="../fontawesome-free-5.12.0-web/css/all.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap-4.4.1-dist/css/bootstrap.css">
+	
+	<script type="application/javascript" src="../bootstrap-4.4.1-dist/js/jquery.js"></script>
+    <script type="application/javascript" src="../bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+	
+	<link rel="stylesheet" href="login.css">
+	<script src="libreria.js"></script>		
+	<script src="login.js"></script>	
+</head>
+
+<body>
+<div class="container-fluid" style="margin-top:50px">		
+	<!-- JUMBOTRON  -->
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4"> 
+			<div class="jumbotron text-center" data-toggle="collapse" data-target="#login" id="jumbo">
+				<img src="../img/login.png" width="120" style="background-color:rgb(34,20,50);" class="rounded-circle"> 
+				<h4 style="margin-top:10px">Nozama</h4>
+			</div>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
+	<!-- FINE JUMBOTRON -->
+
+	
+	<div class="row collapse" id="login">   
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">	
+		
+			<form id="form1"  >		
+
+				<!--utente-->
+
+				<div id="div_email" class="form-group input-group">
+					<span class="input-group-text">
+						<i class="fas fa-user"> </i>
+					</span>
+					<input type="text" class="form-control" id="email" 
+					       placeholder="Email">
+				</div>
+
+				<div id="div_pwd" class="form-group input-group">
+					<span class="input-group-text">
+						<i class="fas fa-lock"> </i>
+					</span>
+					<input type="password" class="form-control" id="pwd"
+   					       placeholder="Password">
+				</div>
+
+				<div id="nome" class="form-group input-group">
+					<span class="input-group-text">
+						<i class="fas fa-user"> </i>
+					</span>
+					<input type="text" class="form-control" id="phNome"
+					       placeholder="Nome">
+				</div>
+				
+				<div id="ind" class="form-group input-group">
+					<span class="input-group-text">
+						<i class="fas fa-location-arrow"> </i>
+					</span>
+					<input type="text" class="form-control" id="phInd"
+   					       placeholder="Indirizzo">
+				</div>
+
+				<div id="carta" class="form-group input-group">
+					<span class="input-group-text">
+						<i class="fas fa-id-card"> </i>
+					</span>
+					<input type="text" class="form-control" id="phCarta"
+					       placeholder="Carta">
+				</div>
+
+				<!--fine-->
+
+				<!--item-->
+				<div id="div_desc" class="form-group input-group">
+					<span class="input-group-text">
+						<i class="fas fa-user"> </i>
+					</span>
+					<input type="text" class="form-control" id="phDescrizione"
+   					       placeholder="Descrizione">
+				</div>
+
+				<div id="div_img" class="form-group input-group">
+					<span class="input-group-text">
+						<i class="fas fa-user"> </i>
+					</span>
+					<input type="text" class="form-control" id="phimg"
+					       placeholder="Nome Immagine">
+				</div>
+				
+				<div id="div_vend" class="form-group input-group">
+					<span class="input-group-text">
+						<i class="fas fa-location-arrow"> </i>
+					</span>
+					<input type="text" class="form-control" id="phVend"
+   					       placeholder="Veditore">
+				</div>
+
+				<div id="div_stato" class="form-group input-group">
+					<span class="input-group-text">
+						<i class="fas fa-id-card"> </i>
+					</span>
+					<input type="text" class="form-control" id="phStato"
+					       placeholder="Stato">
+				</div>
+
+				<div id="div_qt" class="form-group input-group">
+					<span class="input-group-text">
+						<i class="fas fa-id-card"> </i>
+					</span>
+					<input type="text" class="form-control" id="phqt"
+					       placeholder="Quantita">
+				</div>
+
+				<div id="div_prezzo" class="form-group input-group">
+					<span class="input-group-text">
+						<i class="fas fa-id-card"> </i>
+					</span>
+					<input type="text" class="form-control" id="phPrezzo"
+					       placeholder="Prezzo">
+				</div>
+
+				<!--fine-->
+				
+				<!-- messaggio di errore -->
+				<div class="alert alert-danger alert-dismissible" id="lblError">			
+					<button type="button" class="close" >&times;</button>
+					<strong>Attenzione!</strong> Email o Password non validi
+				</div>
+
+				
+				<!-- ***************************************** -->
+								
+				<!-- pulsanti -->
+				<div class="form-group">
+					<!-- la classe form-control fa in modo che copra l'intera  
+						 riga, altrimenti vengono visualizzati uno a fianco  
+						 dell'altro. Equivalente a btn-block-->
+					<button type="button" class="btn btn-primary form-control" 
+					        id="btnLogin">	LOGIN
+					</button>	
+					<button type="button" class="btn btn-primary form-control" 
+					        id="btnRegistrati">	REGISTRATI
+					</button>
+					<button type="button" class="btn btn-primary form-control" 
+					        id="btnDati">	CAMBIA DATI
+					</button>
+					<button type="button" class="btn btn-primary form-control" 
+					        id="btnItem">	CARICA ARTICOLO
+					</button>
+					<button id="lkRegistrati" type="button" class="btn btn-link" style="height:18px;">
+						registrati  
+					</button>
+					<button id="lkLogin" type="button" class="btn btn-link" style="height:18px;">
+						login  
+					</button>		
+					<br>
+					<button id="passDiment" type="button" class="btn btn-link" style="height:18px;">
+						hai dimenticato la password?  
+					</button>								
+				</div>					
+			</form>
+		</div>	
+		<div class="col-sm-4"></div>
+	</div> <!-- row -->
+
+	<div class="nav justify-content-center" id="formAccessoFatto">
+		<button type="button" class="btn  btn-outline-success" 
+		        id="btnCaricaItem">	Carica item
+		</button>
+		<button type="button" class="btn  btn-outline-info" 
+		        id="btnCambiaDati">	Cambia dati
+		</button>
+		<button type="button" class="btn  btn-outline-dark" 
+		        id="btnLogout">	LOGOUT
+		</button>		
+	</div>
+		
+	</div> <!-- container -->  
+</div>	
+</body>
+</html>

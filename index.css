@@ -1,0 +1,87 @@
+.zero{
+    padding:0;
+    margin:0;
+}
+
+/*---------navbar---------*/
+#navbar{
+    width:100%;
+    background-color:rgb(16, 2, 26);
+}
+#login{
+    display:inline;
+    background-color: rgba(0,0,0,0);
+    border:1px solid rgba(0,0,0,0);
+}
+#login a{
+    width:100%;
+    height:100%;
+}
+#login:hover{
+    border:1px solid white;
+}
+#title{
+    display:inline;
+    color:rgba(211, 211, 211, 0.8);
+}
+#title:hover{
+    color:white;
+    text-decoration:none;
+}
+#title-div{
+    display:inline-block;
+}
+#search{
+    border:none;
+    padding:2px;
+}
+#btn_src{
+    border:1px solid white;
+    background-color: rgba(255,255,255,0.65);
+}
+#btn_src:hover{
+    background-color: rgba(255,255,255,0.85);
+}
+#carrello{
+    border:1px solid rgba(0,0,0,0);
+    background-color: rgba(0,0,0,0);
+}
+#carrello a{
+    width:100%;
+    height:100%;
+    z-index:100;
+}
+#carrello:hover{
+    border:1px solid white;
+}
+
+/*---------frame---------*/
+iframe{
+    padding:0;
+    margin:0;
+    width:100%;
+    height:1080px;
+    border:none;
+
+}
+
+/*---------footer---------*/
+#footer{
+    margin:0px;
+    padding:0px;
+    background-color:rgb(16, 2, 26);
+}
+#up{
+    padding-left:45%;
+    padding-right:0;
+    background-color:rgb(34,20,50);
+}
+#footer a{
+    color:rgba(211, 211, 211, 0.8);
+}
+#footer a:hover{
+    text-decoration:none;
+}
+#footer div a:hover{
+    color:white;
+}
