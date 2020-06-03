@@ -1,0 +1,3 @@
+p.stefirca.0882@vallauri.edu  -> password
+pippo                         -> password
+stefirca.alex.as@gmail.com    -> password
